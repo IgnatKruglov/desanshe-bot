@@ -10,6 +10,8 @@ const botCommands = [
     {command: '/start', description: 'В начало беседы.'}
 ];
 
+const port = process.env.PORT || 10000;
+
 bot.setMyCommands(botCommands)
     .then(() => {
         console.log('Bot commands have been set successfully.');

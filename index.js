@@ -1,5 +1,17 @@
 const TelegramApi = require('node-telegram-bot-api')
+const express = require('express');
 const token = process.env.TOKEN;
+const port = process.env.PORT || 3000; // Use Render's PORT environment variable
+
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Telegram bot is running!');
+});
+
+app.listen(port, () => {
+    console.log(`Web server running on port ${port}`);
+});
 // const ownerChatId = 6091491638;
 const ownerChatId = 450702453;
 

@@ -1,12 +1,9 @@
 const TelegramApi = require('node-telegram-bot-api')
 const token = process.env.TOKEN;
-console.log(token);
 // const ownerChatId = 6091491638;
 const ownerChatId = 450702453;
 
 const bot = new TelegramApi(token, {polling: true})
-
-const port = process.env.PORT || 10000;
 
 const botCommands = [
     {command: '/start', description: 'В начало беседы.'}
